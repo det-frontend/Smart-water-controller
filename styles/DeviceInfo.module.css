@@ -1,0 +1,59 @@
+.device_information{
+    border:1px solid black;
+    position:absolute;
+    background-color: white;
+    border-radius: 0.4rem;
+    width: 80%;
+    max-width: 400px;
+    height: 500px;
+    padding:10px 20px;
+    
+}
+.cancel{
+    position:absolute;
+    top:5px;
+    right:5px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.device_info_div{
+    margin-top: 30px;
+    display: flex;
+    gap:1rem;
+    align-items: start;
+    flex-direction: column;
+    justify-content:start;
+}
+.device_model_container{
+    padding:5px;
+    width: 100%;
+    border-radius: 0.3rem;
+}
+
+.device_info_div h3{
+    font-size:1rem;
+    font-weight:400;
+}
+.device_info_div p{
+    color:gray;
+    font-size: 0.9rem;
+}
+
+.device_release_and_version_container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:start;
+    gap:4rem;
+}
+.device_information_title{
+    margin-top: 30px;
+    width: 80%;
+    padding:10px;
+    margin: 30px auto 0px auto;
+    text-align: center;
+    background: #075cc4f5;
+    border-radius: 0.3rem;
+    color:white;
+}

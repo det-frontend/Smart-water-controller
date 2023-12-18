@@ -1,0 +1,377 @@
+.singleDevice{
+    width: 100%;
+    padding:10px;
+    display: flex;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+.button_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width:100%;
+    margin-bottom:10px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.button_container h2{
+    font-weight: bold;
+    font-size: 1.5rem;
+    border-bottom:2px dashed rgb(0, 0, 0);
+}
+
+
+.serialNumber{
+    padding:10px;
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+.serialNumber h3{
+    color:gray;
+}
+.serialNumber span{
+    color:black;
+    font-weight: bolder;
+}
+.water_container{
+    width: 100%;
+    gap:1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+} 
+.water_container_one{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 10px 10px 29px -3px rgba(113, 113, 113, 0.75);
+    height:auto;
+    width: 100%;
+    border-radius: 2rem;
+    margin-top: 20px;
+    max-width: 450px;
+}
+.water_container_two{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 10px 10px 29px -3px rgba(113, 113, 113, 0.75);
+    height: auto;
+    width: 100%;
+    border-radius: 2rem;
+}
+.motor_name{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    font-weight: bolder;
+}
+.water_circle_container{
+    position: relative;
+}
+
+.auto_button{
+    background-color: #0a4ea2f5;
+    border: 2px solid #0a4ea2f5;
+    color:white;
+    width: 100px;
+    height: 50px;
+    padding:10px;
+    border-radius: 0.3rem;
+    transition: all 0.4s ease;
+
+}
+.auto_button:hover{
+    border:2px solid #0a4ea2f5;
+    background-color: white;
+    color:black;
+}
+.manual_button{
+    display:none;
+}
+.water_circle_container_one_wave_one,
+.water_circle_container_one_wave_one_no{
+    width:200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color:#1566cac4;
+    box-shadow: inset 0 0 20px 0 #07356cf5;
+    position: relative;
+    border:1px solid rgb(93, 93, 93);
+    overflow: hidden;
+    z-index: -1;
+    
+}
+.water_circle_container_one_wave_one:after,
+.water_circle_container_one_wave_one:before{
+    content: "";
+    position:absolute;
+    width: 200%;
+    height: 200%;
+    top:-50%;
+    left:50%;
+    background-color: #ffff;
+}
+.water_circle_container_one_wave_one_no:after,
+.water_circle_container_one_wave_one_no:before{
+    content: "";
+        position: absolute;
+        width: 200%;
+        height: 200%;
+        top: -50%;
+        left: 50%;
+        background-color: #ffff;
+}
+.water_circle_container_one_wave_one:after{
+    border-radius: 45%;
+    animation:water_wave 5s linear infinite;
+}
+.water_circle_container_one_wave_one_no:after{
+    border-radius: 45%;
+    animation:water_wave_no 5s linear infinite;
+}
+
+.water_circle_container_one_wave_one:before{
+    border-radius: 35%;
+    background-color: rgba(225, 225, 225, .3);
+    animation: water_wave 5s linear infinite;
+}
+.water_circle_container_one_wave_one_no:before {
+    border-radius: 35%;
+    animation: water_wave_no 5s linear infinite;
+}
+
+.water_active_button_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:30px 0;
+}
+.water_active_button{
+    border:2px solid #0853aee9;
+    background-color:#0853aee9;
+    padding:10px;
+    width: 150px;
+    border-radius: 0.3rem;
+    margin:0 auto;
+    color:white;
+    transition:0.6s all ease-in-out;
+box-shadow: 10px 15px 20px -13px rgba(44, 44, 44, 0.75);
+}
+.water_active_button:hover{
+    border: 2px solid #0853aee9;
+        background-color: white;
+        padding: 10px;
+        border-radius: 0.3rem;
+        margin: 0 auto;
+        color: #0853aee9;
+}
+
+
+
+
+/* switch button */
+
+.switch{
+    position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch input:checked+.slider {
+    background-color: #0853aee9;
+}
+
+.switch input:focus+.slider {
+    box-shadow: 0 0 1px #b6b6c2;
+}
+
+.switch input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #7d7d7d;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "M";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: rgb(204, 201, 201);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+
+
+
+@keyframes water_wave{
+    0%{
+        transform:translate(-50%,-50%) rotate(0deg );
+        top:-20%;
+    }
+         50% {
+             transform: translate(-50%, -50%) rotate(0deg);
+             top:-50%;
+         }
+                  100% {
+                      transform: translate(-50%, -50%) rotate(360deg);
+                      top:-20%;
+                  }
+}
+
+
+
+
+.bubble_one{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    bottom:-10%;
+    left: 20%;
+        background-color: #8ebffae5;
+  opacity: 0.3;
+        animation: bubble_up 2s ease infinite;
+}
+.bubble_two{
+    position: absolute;
+    height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        bottom: -10%;
+        left: 30%;
+  opacity: 0.3;
+        background-color: #8ebffae5;
+        animation: bubble_up 3s linear infinite;
+}
+.bubble_three{
+position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    bottom: -10%;
+    left: 50%;
+        background-color: #8ebffae5;
+
+  opacity: 0.3;
+        animation: bubble_up 2s linear infinite;
+}
+.bubble_four{
+position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    bottom: -10%;
+    left: 55%;
+        background-color: #8ebffae5;
+  opacity: 0.3;
+        animation: bubble_up 1s linear infinite;
+}
+.bubble_five {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    bottom: -10%;
+    left: 58%;
+        background-color: #8ebffae5;
+    opacity: 0.3;
+        animation: bubble_up 2.3s linear infinite;
+}
+.bubble_six{
+       position: absolute;
+        height:22px;
+        width: 22px;
+        border-radius: 50%;
+        bottom: -10%;
+        left: 70%;
+        background-color: #6da6ec;
+        opacity: 0.3;
+        animation: bubble_up 1s linear infinite;
+}
+.bubble_seven {
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    bottom: -10%;
+    left:10%;
+    background-color: #b7d3f4;
+    opacity: 0.3;
+    animation: bubble_up 1s linear infinite;
+}
+.bubble_eight {
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    bottom: -10%;
+    left:6%;
+    background-color: #b7d3f4;
+    opacity: 0.3;
+    animation: bubble_up 3s linear infinite;
+}
+@keyframes bubble_up{
+   from{
+    transform: translateY(0);
+   }to{
+    transform: translateY(-400%);
+   }
+}
+
+@media screen and (min-width:900px) {
+    .singleDevice{
+        height: calc((100svh - 60px));
+        justify-content:start;
+        gap:10%;
+    }
+    .water_container{
+        display: flex;
+        gap:10rem;
+        flex-direction: row;
+    }
+
+
+}

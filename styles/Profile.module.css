@@ -1,0 +1,173 @@
+.Profile{
+    padding:20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.colorSpan{
+    width: 100%;
+    height: 150px;
+    z-index: -1;
+    top:0;
+    left:0;
+    right:0;
+    background-color: #0a55b1f5;
+    position: absolute;
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+
+.user_div{
+    background-color: white;
+    margin-top: 5%;
+    width: 100%;
+    max-width: 450px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:2rem;
+    align-items: center;
+    box-sizing: border-box;  
+    padding:20px;
+    border-radius: 0.3rem;
+    box-shadow: 5px 6px 14px 0px rgba(128, 127, 127, 0.75);
+} 
+.user_img{
+    border:1px solid black;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.gender{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    margin:30px auto;
+}
+.gender h3{
+margin:10px 0;
+}
+.gender_kinds{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap:20px;
+}
+.user_info{
+    width: 100%;
+}
+.gender_kinds li{
+    padding:5px;
+    border-radius: 0.4rem;
+    box-shadow: 5px 6px 14px -7px rgba(114, 114, 114, 0.75);
+    cursor: pointer; 
+}
+.gender_kinds_active{
+    background-color:#0a55b1f5;
+    color:white;
+}
+.gender_active{
+    background-color: #0a55b1f5;
+    color:white;
+}
+.form_div{
+    margin-top:30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.user_form{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+    width: 100%;
+    max-width: 430px;
+}
+.email,
+.phone,
+.password{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding:0px 10px;
+    height: 45px;
+    gap:10px;
+    border:1px solid black;
+    color:rgb(136, 135, 135);
+    border-radius:0.3rem;
+    width: 100%;
+    max-width:430px;
+
+}
+
+.email input,
+.phone input,
+.password input{
+    border:none;
+    outline:none;
+    color:black;
+    width: 100%;
+}
+.editButton{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    background-color: #0a55b1f5;
+    color:white;
+    gap:10px;
+    border-radius: 0.3rem;
+    padding:10px 15px;
+    border:2px solid #0a55b1f5;
+    transition: all 0.4s ease-in-out;
+}
+.editButton:hover{
+    background-color: white;
+    color:#0a55b1f5;
+}
+.button_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+}
+
+@media screen and (min-width:720px) {
+    .login_container {
+        width: 740px;
+    }
+}
+
+@media screen and (min-width:900px) {
+   
+}
+
+@media screen and (min-width:1000px){
+   .Profile{
+    flex-direction: row;
+    height: calc(100svh - 60px);
+    max-width: 1500px;
+    margin:0 auto;
+    align-items: center;
+    justify-content: space-evenly;
+   }
+   .user_div{
+    width: 50%;
+    border-radius: 20px;
+    height:400px;
+   }
+   .user_info{
+    width: 50%;
+   }
+  
+  
+}

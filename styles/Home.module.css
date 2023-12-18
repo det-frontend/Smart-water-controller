@@ -1,0 +1,182 @@
+.home{
+  padding:15px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+.bubble {
+  width: 200px;
+    height: 200px;
+    position: absolute;
+    background-color: #075cc4f5;
+    top: 0;
+    right: 0;
+    border-radius: 100%;
+    z-index: -1;
+    transform: translate(80px, -80px);
+    opacity: 0.8;
+    animation: move3 1s ease-in-out;
+
+}
+.home_greeting{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap:2rem;
+  margin-top: 10px;
+}
+.home_devices_place{
+  margin-top: 50px;
+}
+.home_title{
+  margin-bottom: 20px;
+  animation: popup 1.2s ease-in-out;
+}
+.home_greeting_partone{
+  width: 100%;
+}
+.home_greeting_des{
+  display: flex;
+  flex-direction: column;
+  align-items:start;
+  justify-content: start;
+  animation: popup 1.2s ease-in;
+}
+.home_greeting_time{
+  color:gray;
+  margin-top:10px;
+  animation: popup 1.2s ease-in;
+    font-size: 13px;
+}
+.home_greeting_title{
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+.home_username{
+  margin-left:5px;
+  font-weight:bolder;
+}
+.home_greeting_name{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home_greeting_parttwo{
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home_add_device{
+  width :55px ;
+  height:55px;
+  font-size :20px;
+  text-align: center;
+  line-height: 100px;
+  color: rgba(255, 255, 255, 0.9) ;
+  border-radius:50px ;
+  background :linear-gradient(-45deg, #69B34C, #FF0D0D, #FAB733, #69B34C);
+  background-size :600%;
+  animation: anime 16s linear infinite;
+box-shadow: 6px 5px 22px -7px rgba(0, 0, 0, 0.75);
+cursor: pointer;
+transition: all 0.5s ease-in-out;
+}
+.home_add_device:hover{
+  transform: translateY(-4px);
+}
+
+.newDeviceWrapper{
+  background-color: rgba(0, 0, 0, 0.525);
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top:0;
+  z-index:99;
+  left:0;
+  bottom:0;
+  right:0;
+}
+.home_devices_container{
+  margin-top: 20px;
+}
+
+ @keyframes anime {
+  0%{
+    background-position: 0% 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0% 50%;
+  }
+ }
+
+
+@keyframes move1 {
+  from {
+    transform: translateX(-400%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes move2 {
+
+  from {
+    transform: translateX(400%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes move3 {
+  from {
+    transform: translate(200px, -80px);
+  }
+
+  to {
+    transform: translate(80px, -80px);
+  }
+}
+
+@keyframes popup {
+  from {
+    transform: translateY(20px);
+    opacity: 0.5;
+  }
+
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+ @media screen and (min-width:700px) {
+   .home_devices_container {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content:start;
+   align-items: center;
+   }
+
+
+ }
+
+ @media screen and (min-width:800px) {
+   .home_devices_container {
+    padding:20px;
+     justify-content:start;
+     align-items:center;
+     gap: 3.33%;
+   }
+
+
+ }

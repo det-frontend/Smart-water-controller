@@ -1,0 +1,63 @@
+.newDevice{
+    background-color: white;
+    width: 300px;
+    height: 350px;
+    border-radius:0.7rem;
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap:15%;
+    position: relative;
+    color:black;
+}
+.cancle{
+    background-color:white;
+    border-radius: 0.7rem;
+    color:black;
+    padding:10px;
+    position:absolute;
+    right:0;
+    top:0;
+    cursor: pointer;
+}
+.numberContainer,.nameContainer{
+    border:1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    gap:10px;
+    padding:10px;
+    border-radius: 0.5rem;
+}
+.numberContainer input,.nameContainer input{
+    width: 100%;
+    border:none;
+    outline: none;
+}
+.form_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:1rem;
+}
+.addButton{
+    margin-top: 10%;
+    width: 100%;
+    padding:10px;
+    background-color: #075cc4f5;
+    border-radius:0.5rem;
+    border: 2px solid #075cc4f5;
+    transition: all 0.3s ease-in-out;
+    color:white;
+}
+.addButton:hover{
+        margin-top: 10%;
+        width: 100%;
+        padding: 10px;
+        background-color: white;
+        color:#075cc4f5;
+        border-radius: 0.5rem;
+        border:2px solid #075cc4f5;
+}
